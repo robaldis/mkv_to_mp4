@@ -12,4 +12,5 @@ of the data.
 * Show a percentage done of current conversion (time completed/total time)
 * Hide the terminal when running(build python)
     * Make it so it forces run as admin so it supports deleting of the file after
-* Improve the compression of the mp4 file at the end
+* Improve the compression of the mp4 file at the end (not seeing it be a problem on linux with smaller videos)
+    * look at bitrate of the output on the large file created on windows
