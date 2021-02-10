@@ -8,7 +8,6 @@ of the data.
 
 
 # TODO
-* Make an automatic mode to search on a schedule
 * Show a percentage done of current conversion (time completed/total time)
 * Hide the terminal when running(build python)
     * Make it so it forces run as admin so it supports deleting of the file after
