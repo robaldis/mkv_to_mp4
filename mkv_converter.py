@@ -2,6 +2,7 @@ import os
 import ffmpeg
 import time
 
+
 class Converter ():
     def __init__(self):
         self.AUTO_MODE = False
@@ -16,13 +17,13 @@ class Converter ():
         if (self.AUTO_MODE and self.check_in_schedule()):
             self.search_sub_dir()
 
-        
-        
-
     def mkv_to_mp4(self, mkv_file):
         name, ext = os.path.splitext(mkv_file)
         out_name = name + ".mp4"
-        ffmpeg.input(mkv_file).output(out_name).compile(overwrite_output=False)
+        ffmpeg.input(mkv_file).output(
+                out_name,
+                **{"b:v": "1M"}
+                ).run(overwrite_output=False)
         print(f"Finished converting {mkv_file}")
         # os.remove(mkv_file)
 
@@ -48,7 +49,7 @@ class Converter ():
         return False
 
     def set_schedule_start(self, time):
-        print("[set_schedule_start] "  + time)
+        print("[set_schedule_start] " + time)
         self.schedule_start = time
 
     def set_schedule_end(self, time):

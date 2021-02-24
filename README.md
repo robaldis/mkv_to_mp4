@@ -11,5 +11,6 @@ of the data.
 * Show a percentage done of current conversion (time completed/total time)
 * Hide the terminal when running(build python)
     * Make it so it forces run as admin so it supports deleting of the file after
-* Improve the compression of the mp4 file at the end (not seeing it be a problem on linux with smaller videos)
-    * look at bitrate of the output on the large file created on windows
+* Setup a different media type (tv shows, movies, 4k content) this will be defined with a 
+  folder that contains all this content and have configureation to define what bitrate 
+  to make that content when converting
